@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ragentek.infostreamdemo.MainActivity$PlaceholderFragment" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+	    <ListView
+	        android:id="@+id/mListView"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="#FFFCFCFC"
+	        android:divider="#FFD8D8D8"
+	        android:dividerHeight="1dp"
+	        android:fadingEdge="none"
+	        android:scrollbars="none" />
+	    
+	</android.support.v4.widget.SwipeRefreshLayout>
+	
+	<LinearLayout
+        android:id="@+id/info_refresh_layout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/refresh_bg" >
+
+        <ImageView
+            android:id="@+id/info_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/info_refresh" />
+    </LinearLayout>
+
+</RelativeLayout>

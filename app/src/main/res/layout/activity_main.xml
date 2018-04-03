@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<!--     <LinearLayout 
+        android:id="@+id/pagerTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFC4C4C4"
+        android:padding="9dp" >
+        
+    </LinearLayout> -->
+    <RelativeLayout
+        android:id="@+id/category_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_category_height_2"
+        android:background="@drawable/bg_category_bar" >
+
+        <ImageView
+            android:id="@+id/icon_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name" 
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:scaleType="center"
+            android:src="@drawable/add_2" 
+            android:clickable="true"
+        	android:focusable="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_category_height_2"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/icon_category" >
+
+            <com.ragentek.infostreamdemo.view.CategoryTabStrip
+                android:id="@+id/category_strip"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/top_category_height_2"
+                android:clipToPadding="false"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="6.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <android.support.v4.view.ViewPager
+	    android:id="@+id/pager"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" />
+	
+</LinearLayout>
